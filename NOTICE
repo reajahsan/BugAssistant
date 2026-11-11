@@ -1,0 +1,17 @@
+BugAssistant
+Copyright 2026 Reaj
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes software developed by third parties:
+
+  llama.cpp / ggml (third_party/llama.cpp)
+  Copyright (c) 2023-2026 The ggml authors
+  Licensed under the MIT License; see third_party/llama.cpp/LICENSE.
+
+Model weights are not distributed with this repository. Depending on device
+resources, the app downloads Llama 3.2 3B Instruct or Llama 3.2 1B Instruct
+at runtime. Built with Llama. Llama 3.2 is licensed under the Llama 3.2
+Community License, Copyright (c) Meta Platforms, Inc. All Rights Reserved,
+and its use is subject to the Llama 3.2 Acceptable Use Policy:
+https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/LICENSE

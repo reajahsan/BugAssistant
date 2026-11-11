@@ -1,0 +1,25 @@
+# Gradle / build
+.gradle/
+build/
+.kotlin/
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Local config (SDK path, signing)
+local.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights are downloaded at runtime; never commit them
+*.gguf
+*.gguf.part
