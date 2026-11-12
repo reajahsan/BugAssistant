@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BugAssistant"
 include(":core:llama")
+include(":core:model")
