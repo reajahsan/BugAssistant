@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        System-wide crash data. Neither can be granted from a runtime dialog:
+        READ_LOGS:           adb shell pm grant <package> android.permission.READ_LOGS
+        PACKAGE_USAGE_STATS: Settings > Apps > Special app access > Usage access (or appops via adb)
+        Without them DeviceCollector falls back to this app's own exit history.
+    -->
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+</manifest>
