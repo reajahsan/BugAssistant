@@ -26,3 +26,4 @@ rootProject.name = "BugAssistant"
 include(":core:llama")
 include(":core:model")
 include(":core:diagnostics")
+include(":core:storage")
