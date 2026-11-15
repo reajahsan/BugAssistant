@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">BugAssistant</string>
+
+    <!-- Model status line -->
+    <string name="status_starting">Starting…</string>
+    <string name="status_downloading">Downloading model…</string>
+    <string name="status_downloading_percent">Downloading model… %1$d%%</string>
+    <string name="status_loading">Loading model…</string>
+    <string name="status_ready">Model ready (loaded in %1$d ms)</string>
+    <string name="status_failed">Model failed: %1$s. Tap Retry.</string>
+    <!-- %1$s = extra space needed, e.g. "1.1 GB" -->
+    <string name="status_no_storage">Not enough storage for the AI model. Free up %1$s, then tap Retry.</string>
+
+    <!-- Attribution required by the Llama 3.2 Community License; keep verbatim. -->
+    <string name="built_with_llama" translatable="false">Built with Llama</string>
+    <!-- Model choice. %1$s = model name, e.g. "Llama 3.2 1B"; %2$s = one of model_reason_* -->
+    <string name="model_using">Model: %1$s</string>
+    <string name="model_using_small">Model: %1$s (smaller model: %2$s)</string>
+    <string name="model_reason_low_ram">this device has limited RAM</string>
+    <string name="model_reason_low_storage">not enough free storage for the larger model</string>
+
+    <!-- Scan status -->
+    <string name="scan_running">Scanning device crash reports and logs…</string>
+    <string name="scan_failed">Scan failed: %1$s</string>
+
+    <!-- Buttons -->
+    <string name="action_retry">Retry model</string>
+    <string name="action_import">Import bug report</string>
+    <string name="action_scan">Scan this device</string>
+    <string name="action_analyze">Analyze</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_open_usage_access">Open Usage access</string>
+
+    <!-- Bug report import. %1$s = file name -->
+    <string name="import_running">Reading %1$s…</string>
+    <string name="import_failed">Import failed: %1$s</string>
+    <string name="import_not_bug_report">This file is not an Android bug report. Choose the .zip from Developer options › Take bug report.</string>
+    <string name="share_target_label">Analyze with BugAssistant</string>
+    <string name="share_title">BugAssistant report</string>
+
+    <!-- Saved reports -->
+    <!-- App filter. %1$s = app package name or filter_all_apps -->
+    <string name="filter_label">App: %1$s</string>
+    <string name="filter_all_apps">All apps</string>
+    <string name="history_title">Saved reports</string>
+    <string name="action_export_csv">Export CSV</string>
+    <string name="export_running">Exporting…</string>
+    <!-- %1$d = issue rows, %2$s = file name -->
+    <plurals name="export_done">
+        <item quantity="one">Exported %1$d issue to %2$s</item>
+        <item quantity="other">Exported %1$d issues to %2$s</item>
+    </plurals>
+    <!-- %1$s = technical error detail -->
+    <string name="export_failed">Export failed: %1$s</string>
+    <string name="history_live_scan">Live scan</string>
+    <string name="history_bug_report">Bug report</string>
+    <!-- %1$d = crashes (Java + native), %2$d = ANRs, %3$d = low-memory kills -->
+    <string name="history_counts">Crashes: %1$d · ANRs: %2$d · LMK: %3$d · Leaks: %4$d</string>
+    <string name="history_has_summary">AI summary</string>
+
+    <!-- Device health (bug reports). Sizes are already formatted. -->
+    <string name="health_title">Device health</string>
+    <string name="health_uptime">Uptime: %1$s</string>
+    <!-- %1$.0f = total CPU percent, %2$s = load averages, e.g. "7.5 / 6.0 / 5.2" -->
+    <string name="health_cpu_both">CPU: %1$.0f%% busy · load %2$s</string>
+    <string name="health_cpu_total">CPU: %1$.0f%% busy</string>
+    <string name="health_cpu_load">CPU load: %1$s</string>
+    <!-- %1$s = one of thermal_* -->
+    <string name="health_thermal">Thermal: %1$s</string>
+    <string name="health_storage">Storage: %1$s free of %2$s (%3$d%%)</string>
+    <string name="health_top_cpu">Busiest processes</string>
+    <string name="health_top_memory">Largest memory users</string>
+    <string name="health_jank">UI jank (skipped frames)</string>
+    <plurals name="health_frames">
+        <item quantity="one">%1$d frame</item>
+        <item quantity="other">%1$d frames</item>
+    </plurals>
+    <string name="thermal_none">normal</string>
+    <string name="thermal_light">light</string>
+    <string name="thermal_moderate">moderate, may throttle</string>
+    <string name="thermal_severe">severe, throttling</string>
+    <string name="thermal_critical">critical</string>
+    <string name="thermal_emergency">emergency</string>
+    <string name="thermal_shutdown">shutting down</string>
+    <string name="thermal_unknown">unknown</string>
+
+    <!-- Access banner. %1$s = this app's package name -->
+    <string name="access_own_app_title">Limited access</string>
+    <string name="access_own_app_body">Only this app\'s own crashes are visible. To scan every app on the device, connect it to a computer, run this command, then restart the app:</string>
+    <string name="access_adb_command" translatable="false">adb shell pm grant %1$s android.permission.READ_LOGS</string>
+    <string name="access_logs_only_title">Partial access: device logs only</string>
+    <string name="access_usage_body">Turn on Usage access for BugAssistant to read full crash reports, native tombstones and ANR stack traces. If Android asks, allow access to all device logs.</string>
+
+    <!-- Overview. %1$s = device description, %2$d = window length in hours -->
+    <string name="overview_window">%1$s · last %2$d h</string>
+    <!-- %1$s = bug report file name, %2$s = capture date and time -->
+    <string name="overview_bug_report">%1$s · captured %2$s</string>
+    <string name="stat_crashes">Crashes</string>
+    <string name="stat_native">Native</string>
+    <string name="stat_anrs">ANRs</string>
+    <string name="stat_lmk">LMK kills</string>
+    <string name="stat_leaks">Leaks</string>
+
+    <!-- Memory. Sizes are already formatted, e.g. "1.2 GB" -->
+    <string name="memory_ram">RAM: %1$s free of %2$s (%3$d%%)</string>
+    <string name="memory_swap">Swap: %1$s used of %2$s</string>
+    <string name="memory_low_now">Low on memory right now (threshold %1$s)</string>
+    <string name="memory_low">Low on memory</string>
+
+    <!-- AI summary -->
+    <string name="summary_title">AI summary</string>
+    <string name="summary_no_issues">No crashes, ANRs or low-memory kills were found in this window.</string>
+    <!-- %1$s = app package name -->
+    <string name="summary_no_issues_app">No crashes, ANRs or low-memory kills for %1$s in this report.</string>
+    <string name="summary_thinking">Analyzing on device… %1$ds</string>
+    <string name="summary_thinking_hint">The AI is reading the report. This can take a minute on slower devices.</string>
+    <string name="summary_waiting_model">The summary starts when the model is ready.</string>
+    <string name="summary_idle">Tap Analyze to summarize these issues.</string>
+
+    <!-- Issue list -->
+    <string name="issues_title">Issues</string>
+    <string name="kind_crash">App crash</string>
+    <string name="kind_native_crash">Native crash</string>
+    <string name="kind_anr">ANR</string>
+    <string name="kind_lmk">Low-memory kill</string>
+    <string name="kind_low_memory">System low memory</string>
+    <string name="kind_memory_leak">Memory leak suspect</string>
+    <string name="issue_count">×%1$d</string>
+    <string name="issue_freed">Freed %1$s in total</string>
+    <!-- %1$s = relative time, e.g. "2 hours ago" -->
+    <string name="issue_last_seen">Last seen %1$s</string>
+
+    <!-- Generation stats. %1$d = time to first token (ms), %2$d = token count, %3$.1f = tokens per second -->
+    <plurals name="stats_done">
+        <item quantity="one">TTFT %1$d ms · %2$d token · %3$.1f tok/s</item>
+        <item quantity="other">TTFT %1$d ms · %2$d tokens · %3$.1f tok/s</item>
+    </plurals>
+    <string name="stats_no_output">No output</string>
+    <string name="stats_stopped">Stopped</string>
+    <string name="stats_error">Error: %1$s</string>
+
+    <!-- Fallback when an error has no message -->
+    <string name="error_unknown">unknown error</string>
+</resources>
