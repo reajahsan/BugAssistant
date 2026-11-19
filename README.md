@@ -1,5 +1,7 @@
 # BugAssistant
 
+[![CI](https://github.com/reajahsan/BugAssistant/actions/workflows/ci.yml/badge.svg)](https://github.com/reajahsan/BugAssistant/actions/workflows/ci.yml)
+
 **On-device crash, memory and slowness triage for Android.**
 BugAssistant analyzes Android **bug reports** and the phone's own logs. It finds crashes, ANRs, native crashes, memory pressure and causes of slowness, groups them into issues, saves each report in an on-device database, and uses an on-device LLM ([llama.cpp](https://github.com/ggml-org/llama.cpp) + Llama 3.2) to write a plain-English summary of what is wrong and what to do about it.
 Diagnostics never leave the device unless you share them.
